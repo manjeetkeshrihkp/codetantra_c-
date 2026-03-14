@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+// Function to swap values using call by value
+void swapByValue(int x, int y) {
+
+
+	// Write your code here...
+	int temp = x;
+	x= y;
+	y = temp;
+
+
+
+}
+// Function to swap values using call by reference
+void swapByReference(int &x, int &y) {
+	// Write your code here...
+int temp = x;
+	x = y;
+	y = temp;
+}
+int main() {
+    int a, b;
+    cin >> a >> b;
+    // Swap using call by value
+    swapByValue(a, b);
+    cout << a << " " << b << endl;
+    // Swap using call by reference
+    swapByReference(a, b);
+    cout << a << " " << b << endl;
+    return 0;
+}
