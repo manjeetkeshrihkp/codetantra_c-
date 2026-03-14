@@ -1,0 +1,113 @@
+// #include <iostream>
+// using namespace std;
+
+// class Person {
+
+// 	//write your code here..
+	
+// };
+
+// class Student : virtual public Person {
+	
+// 	//write your code here..
+	
+// };
+
+// class Employee : virtual public Person {
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Base class
+class Person {
+protected:
+    string name;
+    int age;
+public:
+    void getPersonDetails(string n, int a) {
+        name = n;
+        age = a;
+    }
+    void showPersonDetails() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+    }
+};
+
+// Student class inherits virtually from Person
+class Student : virtual public Person {
+protected:
+    string studentID;
+public:
+    void getStudentDetails(string sid) {
+        studentID = sid;
+    }
+    void showStudentDetails() {
+        cout << "Student ID: " << studentID << endl;
+    }
+};
+
+// Employee class inherits virtually from Person
+class Employee : virtual public Person {
+protected:
+    string employeeID;
+public:
+    void getEmployeeDetails(string eid) {
+        employeeID = eid;
+    }
+    void showEmployeeDetails() {
+        cout << "Employee ID: " << employeeID << endl;
+    }
+};
+// Intern inherits from both Student and Employee
+class Intern : public Student, public Employee {
+public:
+    void getDetails(string n, int a, string sid, string eid) {
+        getPersonDetails(n, a);
+        getStudentDetails(sid);
+        getEmployeeDetails(eid);
+    }
+    void showDetails() {
+        showPersonDetails();
+        showStudentDetails();
+        showEmployeeDetails();
+    }
+};
+
+int main() {
+    string name, studentID, employeeID;
+    int age;
+
+    // Input
+    getline(cin, name);
+    cin >> age;
+    cin.ignore(); // clear newline
+    getline(cin, studentID);
+    getline(cin, employeeID);
+
+    // Create object
+    Intern ta;
+    ta.getDetails(name, age, studentID, employeeID);
+
+    // Output
+    ta.showDetails();
+
+    return 0;
+}
+
+
+
+// };
+
+// class Intern : public Student, public Employee {
+ 
+// 	//write your code here..
+	
+// };
+
+// int main() {
+//     Intern intern;
+//     intern.getDetails();
+//     intern.showDetails();
+//     return 0;
+// }
