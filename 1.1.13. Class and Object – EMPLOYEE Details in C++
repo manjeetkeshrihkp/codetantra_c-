@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class EMPLOYEE {
+private:
+	int eid;
+	string ename;
+	double esalary;
+
+public:
+	void GetData(){
+		cout<<"Enter Employee ID: ";
+		cin>> eid;
+		cout<<"Enter Employee Name: ";
+		cin>>ename;
+		cout<<"Enter Employee Salary: ";
+		cin>>esalary;
+	}
+	void ShowData(){
+		cout<<"Employee ID: " << eid << endl;
+		cout<<"Employee Name: "<< ename << endl;
+		cout<<"Employee Salary: "<< esalary << endl;
+	}
+};
+int main(){
+	EMPLOYEE e;
+	e.GetData();
+	e.ShowData();
+	return 0;
+}
