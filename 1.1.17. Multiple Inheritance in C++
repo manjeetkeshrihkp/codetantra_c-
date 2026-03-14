@@ -1,0 +1,128 @@
+// // #include<iostream>
+  
+  
+// // };
+
+// // class Student : public Person
+// // {
+  
+// // //write your code here 
+  
+  
+  
+  
+  
+  
+  
+  
+// // };
+
+// // class Course
+// // {
+  
+// // //write your code here  
+  
+  
+  
+  
+  
+  
+  
+  
+// // };
+
+// // class StudentCourse : public Student, public Course
+// // {
+
+// // //write your code here
+
+
+
+
+// // };
+
+// // int main()
+// // {
+// //     StudentCourse sc;
+// //     sc.getStudentCourseDetails();
+// //     sc.displayStudentCourseDetails();
+// //     return 0;
+// // }
+
+
+
+    void showPersonData() {
+        cout << "Name:" << name << endl;
+        cout << "Address:" << address << endl;
+        cout << "City:" << city << endl;
+        cout << "Age:" << age << endl;
+    }
+};
+
+// Derived class from Person for student details
+class Student : public Person {
+protected:
+    int studentID;
+    string major;
+public:
+    void getStudentData(int id, string m) {
+        studentID = id;
+        major = m;
+    }
+    void showStudentData() {
+        cout << "Student ID:" << studentID << endl;
+        cout << "Major:" << major << endl;
+    }
+};
+// Independent class for course details
+class Course {
+protected:
+    int courseHours;
+    string subject;
+public:
+    void getCourseData(int hours, string sub) {
+        courseHours = hours;
+        subject = sub;
+    }
+    void showCourseData() {
+        cout << "Course Hours:" << courseHours << endl;
+        cout << "Subject:" << subject << endl;
+    }
+};
+
+// Multiple inheritance: StudentCourse inherits from Student and Course
+class StudentCourse : public Student, public Course {
+public:
+    void showAllData() {
+        showPersonData();
+        showStudentData();
+        showCourseData();
+    }
+};
+
+int main() {
+    string name, address, city, major, subject;
+    int age, studentID, courseHours;
+    // Input
+    getline(cin, name);
+    getline(cin, address);
+    getline(cin, city);
+    cin >> age;
+    cin >> studentID;
+    cin.ignore(); // clear newline
+    getline(cin, major);
+    cin >> courseHours;
+    cin.ignore(); // clear newline
+    getline(cin, subject);
+
+    // Create object
+    StudentCourse sc;
+    sc.getPersonData(name, address, city, age);
+    sc.getStudentData(studentID, major);
+    sc.getCourseData(courseHours, subject);
+    // Output
+    sc.showAllData();
+
+    return 0;
+}
+
