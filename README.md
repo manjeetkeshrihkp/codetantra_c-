@@ -1,69 +1,82 @@
-# 🚀 Codetantra C Programs
+# 🚀 Codetantra C++ Laboratory
 
-![Language](https://img.shields.io/badge/Language-C-blue)
-![Platform](https://img.shields.io/badge/Platform-Codetantra-green)
-![Status](https://img.shields.io/badge/Status-Active-success)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+![Language](https://img.shields.io/badge/Language-C++-blue.svg)
+![Platform](https://img.shields.io/badge/Platform-Codetantra-green.svg)
+![Status](https://img.shields.io/badge/Status-Active-success.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-A structured collection of **C programming solutions for Codetantra assignments and lab exercises**.  
-This repository helps students understand **core C programming concepts** and practice common problems used in Codetantra labs.
+A curated collection of **C++ programming solutions for Codetantra laboratory exercises and assignments**.  
+This repository aims to help students understand **core programming concepts, improve logical thinking, and prepare effectively for Codetantra lab sessions**.
+
+---
+
+## 📌 Table of Contents
+
+- 📖 About the Project  
+- ✨ Key Features  
+- 📂 Repository Structure  
+- 🧠 Concepts Covered  
+- ⚙️ Getting Started  
+- 💡 Example Program  
+- 🤝 Contributing  
+- 📜 License  
+- 👨‍💻 Author  
 
 ---
 
 ## 📖 About the Project
 
-**Codetantra C Programs** is a repository that contains solutions to common C programming questions asked in Codetantra lab assignments.
+The **Codetantra C++ Laboratory Repository** contains solutions to commonly assigned programming problems used in Codetantra labs.
 
-The goal of this project is to provide:
+The primary goal of this project is to provide:
 
-- Beginner-friendly C programs  
-- Clean and simple logic  
-- Organized examples for practice  
-- Quick revision material for lab exams  
+- Clear and beginner-friendly C++ programs  
+- Well-structured coding examples  
+- Practice material for lab exercises  
+- A quick reference for programming fundamentals  
+
+This repository can serve as a **learning resource for beginners and a revision guide for students preparing for lab evaluations**.
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-- 📚 Easy-to-understand programs  
-- 🧠 Logic-building coding examples  
-- 📂 Organized by programming concepts  
-- ⚡ Beginner-friendly implementations  
-- 🎓 Helpful for Codetantra lab preparation  
+- 📚 Beginner-friendly code implementation  
+- 🧠 Focus on logical problem solving  
+- 📂 Organized programming examples  
+- ⚡ Easy-to-run programs  
+- 🎓 Useful for Codetantra lab preparation  
 
 ---
 
 ## 📂 Repository Structure
 
-```
-
-codetantra_c/
+codetantra_cpp/
 │
 ├── arrays/
-│   └── array_example.c
+│ └── array_example.cpp
 │
 ├── loops/
-│   ├── fibonacci.c
-│   └── factorial.c
+│ ├── fibonacci.cpp
+│ └── factorial.cpp
 │
 ├── patterns/
-│   ├── pattern1.c
-│   └── pattern2.c
+│ ├── pattern1.cpp
+│ └── pattern2.cpp
 │
 ├── functions/
-│   └── nCr.c
+│ └── nCr.cpp
 │
 └── README.md
 
-```
 
-Each folder contains programs grouped by **specific programming concepts**.
+Each folder contains programs categorized by **specific C++ programming concepts**.
 
 ---
 
 ## 🧠 Concepts Covered
 
-Programs in this repository include topics such as:
+The repository includes programs based on:
 
 - Variables and Data Types  
 - Input / Output  
@@ -72,7 +85,7 @@ Programs in this repository include topics such as:
 - Arrays  
 - Functions  
 - Pattern Printing  
-- Mathematical Programs  
+- Mathematical Computations  
 
 ---
 
@@ -82,52 +95,34 @@ Follow these steps to run the programs on your system.
 
 ### 1️⃣ Clone the repository
 
-```
-
-git clone [https://github.com/manjeetkeshrihkp/codetantra_c.git](https://github.com/manjeetkeshrihkp/codetantra_c.git)
-
-```
-
-### 2️⃣ Navigate to the folder
-
-```
+git clone https://github.com/manjeetkeshrihkp/codetantra_c.git
 
 cd codetantra_c
 
-```
-
 ### 3️⃣ Compile a program
-
-```
-
-gcc filename.c
-
-```
+g++ filename.cpp
 
 ### 4️⃣ Run the program
 
-```
-
 ./a.out
-
-````
 
 ---
 
 ## 💡 Example Program
 
-Example: Fibonacci Series in C
 
-```c
-#include <stdio.h>
+Fibonacci Series in C++
+
+#include <iostream>
+using namespace std;
 
 int main() {
     int n = 10, a = 0, b = 1, next;
 
-    printf("Fibonacci Series:\n");
+    cout << "Fibonacci Series:" << endl;
 
     for(int i = 0; i < n; i++) {
-        printf("%d ", a);
+        cout << a << " ";
         next = a + b;
         a = b;
         b = next;
@@ -135,39 +130,30 @@ int main() {
 
     return 0;
 }
-````
 
----
 
-## 🤝 Contributing
+🤝 Contributing
 
-Contributions are welcome!
+Contributions, issues, and feature requests are welcome!
 
-If you would like to improve this repository:
+If you would like to contribute:
 
-1. Fork the repository
-2. Create a new branch
-3. Add your improvements or programs
-4. Submit a Pull Request
+Fork the repository.
 
----
+Create a new branch (git checkout -b feature/YourFeature).
 
-## 📜 License
+Commit your changes (git commit -m 'Add some feature').
 
-This project is licensed under the **MIT License**.
+Push to the branch (git push origin feature/YourFeature).
 
----
+Open a Pull Request.
 
-## 👨‍💻 Author
+📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-**Manjeet Keshri**
+👨‍💻 Author
+Manjeet Keshri
 
-GitHub:
-[https://github.com/manjeetkeshrihkp](https://github.com/manjeetkeshrihkp)
+GitHub: @manjeetkeshrihkp
 
----
-
-⭐ If this repository helps you, please consider **starring the repository**.
-
-```
-```
+⭐ If you found this repository helpful, please consider giving it a star!
