@@ -1,0 +1,90 @@
+// #include <iostream>
+// using namespace std;
+// class      {
+
+// 	//write your code here...
+	
+// };
+
+// // First derived class
+// class Square :       {
+
+// 	//write your code here...
+	
+// };
+
+// // Second derived class
+// class Cube :         {
+
+// 	//write your code here...
+	#include <iostream>
+using namespace std;
+
+class Shape {
+protected:
+    int side;
+public:
+    void setSide(int s) {
+        side = s;
+    }
+    int getSide() {
+        return side;
+    }
+};
+
+// Derived class for Square
+class Square : public Shape {
+public:
+    int getArea() {
+        return side * side;
+    }
+};
+
+// Derived class for Cube
+class Cube : public Shape {
+public:
+    int getVolume() {
+        return side * side * side;
+    }
+};
+
+int main() {
+    int s;
+    cout << "Side length: ";
+    cin >> s;
+
+    // Square object
+    Square sq;
+    sq.setSide(s);
+
+    // Cube object
+    Cube cu;
+    cu.setSide(s);
+
+    // Output
+    cout << "Area of square: " << sq.getArea() << endl;
+    cout << "Volume of cube: " << cu.getVolume() << endl;
+
+    return 0;
+}
+
+
+	
+// };
+
+// int main() {
+//     int s;
+//     cout << "Side length: ";
+//     cin >> s;
+
+//     Square sq;
+//     Cube cu;
+
+//     sq.setSide(s);
+//     cu.setSide(s); // Use setter instead of accessing `side` directly
+
+//     cout << "Area of square: " << sq.getArea() << endl;
+//     cout << "Volume of cube: " << cu.getVolume() << endl;
+
+//     return 0;
+// }
