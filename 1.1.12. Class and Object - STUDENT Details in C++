@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+class STUDENT {
+    // write your code here
+    // declare data members
+    // declare member functions
+private:
+	int sid;
+	int smarks;
+public:
+	void GetData(){
+		cout<<"Enter Student ID: ";
+		cin >> sid;
+		cout<<"Enter Student Marks: ";
+		cin >> smarks;
+	}
+    void ShowData(){
+		cout<<"Student ID: "<< sid << endl;
+		cout<<"Student Marks: "<< smarks << endl;
+	}
+};
+
+int main() {
+    STUDENT s;
+    s.GetData();
+    s.ShowData();
+    return 0;
+}
