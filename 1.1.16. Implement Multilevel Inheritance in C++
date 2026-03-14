@@ -1,0 +1,88 @@
+// #include <iostream>
+// using namespace std;
+
+// class      {
+	
+// 	// Write your code here...
+	
+// };
+
+// class derive1 :       {
+	 
+// 	// Write your code here... 
+	
+	
+// };
+
+// class derive2 :       {
+	
+// 	// Write your code here...
+	
+	
+// };
+
+// int main() {
+//     derive2 a;
+//     a.getdata();
+//     a.readdata();
+//     a.indata();
+//     a.product();
+//     return 0;
+// }
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+// Base class
+class Base {
+protected:
+    int a;   // first integer
+public:
+    void getdata(int x) {
+        a = x;
+    }
+};
+
+// Derived class from Base
+class Derive1 : public Base {
+protected:
+    int b;   // second integer
+public:
+    void readdata(int y) {
+        b = y;
+    }
+};
+
+// Further derived class from Derive1
+class Derive2 : public Derive1 {
+private:
+    int c;   // third integer
+public:
+    void indata(int z) {
+        c = z;
+    }
+
+    void product() {
+        cout << (a * b * c) << endl;
+    }
+};
+
+int main() {
+    int x, y, z;
+    cin >> x >> y >> z;
+
+    Derive2 obj;
+    obj.getdata(x);
+    obj.readdata(y);
+    obj.indata(z);
+
+    obj.product();
+
+    return 0;
+}
