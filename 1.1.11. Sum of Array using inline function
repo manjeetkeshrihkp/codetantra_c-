@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+// Inline function to calculate the sum of elements in an integer array
+inline int sumArray(int arr[], int size) {
+    //Write your code here...
+    int sum = 0;
+	for(int i = 0; i < size; i++){
+		sum += arr[i];
+	}
+	return sum;
+    
+    
+}
+int main() {
+    int size;
+    cout << "Enter the size of the array: ";
+    cin >> size;
+
+    int* arr = new int[size];
+
+    cout << "Enter " << size << " integers:" << endl;
+    for (int i = 0; i < size; ++i) {
+        cout << "Enter integer " << i + 1 << ": ";
+        cin >> arr[i];
+    }
+
+    int sum = sumArray(arr, size);
+    cout << "Sum of array elements: " << sum << endl;
+
+    delete[] arr;
+    return 0;
+}
