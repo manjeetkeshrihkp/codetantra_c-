@@ -5,40 +5,18 @@
 
 // // class Student : public Person
 // // {
-  
-// // //write your code here 
-  
-  
-  
-  
-  
-  
-  
-  
+// // //write your code here   
 // // };
 
 // // class Course
 // // {
   
 // // //write your code here  
-  
-  
-  
-  
-  
-  
-  
-  
 // // };
 
 // // class StudentCourse : public Student, public Course
 // // {
-
 // // //write your code here
-
-
-
-
 // // };
 
 // // int main()
@@ -48,9 +26,6 @@
 // //     sc.displayStudentCourseDetails();
 // //     return 0;
 // // }
-
-
-
     void showPersonData() {
         cout << "Name:" << name << endl;
         cout << "Address:" << address << endl;
@@ -99,7 +74,6 @@ public:
         showCourseData();
     }
 };
-
 int main() {
     string name, address, city, major, subject;
     int age, studentID, courseHours;
@@ -114,7 +88,6 @@ int main() {
     cin >> courseHours;
     cin.ignore(); // clear newline
     getline(cin, subject);
-
     // Create object
     StudentCourse sc;
     sc.getPersonData(name, address, city, age);
@@ -122,7 +95,5 @@ int main() {
     sc.getCourseData(courseHours, subject);
     // Output
     sc.showAllData();
-
     return 0;
 }
-
